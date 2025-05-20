@@ -121,12 +121,27 @@ function renderCards(cards) {
         cardElement.className = 'card';
         cardElement.dataset.id = card.id;
         
+        // Create the card structure
         cardElement.innerHTML = `
             <div class="card-front">
-                <img src="${card.image}" alt="Card" class="card-image">
+                <img src="${card.image}" alt="Card" class="card-image" loading="eager">
             </div>
             <div class="card-back"></div>
         `;
+        
+        // Add error handling for image loading
+        const img = cardElement.querySelector('.card-image');
+        img.onerror = function() {
+            console.error('Failed to load image:', card.image);
+            this.src = 'images/card-back.webp'; // Fallback to card back
+        };
+        
+        // Add load event to ensure image is loaded
+        img.onload = function() {
+            console.log('Image loaded successfully:', card.image);
+            // Force a reflow to ensure the image is visible
+            cardElement.offsetHeight;
+        };
         
         cardElement.addEventListener('click', () => flipCard(cardElement));
         gameBoard.appendChild(cardElement);
@@ -139,6 +154,8 @@ function flipCard(cardElement) {
     if (gameState.flippedCards.length >= 2) return;
     if (cardElement.classList.contains('flipped') || cardElement.classList.contains('matched')) return;
     
+    // Force a reflow before adding the flipped class
+    cardElement.offsetHeight;
     cardElement.classList.add('flipped');
     gameState.flippedCards.push(cardElement);
     
