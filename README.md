@@ -2,6 +2,10 @@
 
 A memory card matching game featuring Khmer alphabet characters. Test your memory by matching pairs of cards while racing against the clock!
 
+## 👨‍💻 Developer
+
+**Hong Lyher** (Lyher Uchiha)
+
 ## 🎮 Features
 
 - **Memory Challenge**: Match pairs of cards with Khmer characters
