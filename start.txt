@@ -1,0 +1,136 @@
+
+Sure! Here’s a **complete feature list with detailed explanations** focused on using **mouse controls** for your Khmer Card Flip Memory Game with levels.
+
+---
+
+# 🎯 Full Game Features with Mouse Control + How It Works
+
+---
+
+## 1. **Card Flip Mechanics (Mouse Controlled)**
+
+* **Feature:** Player flips cards by clicking with the mouse.
+* **How it works:**
+
+  * Each card is an HTML element with a `click` event listener.
+  * On click, the card flips with a smooth 3D CSS animation revealing its front image.
+  * If two cards are flipped, further clicks are temporarily disabled until the match check is complete.
+  * Matched cards stay revealed and become unclickable.
+
+---
+
+## 2. **Matching Logic**
+
+* **Feature:** Players try to find pairs of matching cards.
+* **How it works:**
+
+  * After flipping two cards, the game compares their images or IDs.
+  * If matched, cards stay flipped and disabled from further clicks.
+  * If not matched, cards flip back after a short delay (e.g., 1 second).
+  * Players use mouse clicks to select cards one by one.
+
+---
+
+## 3. **Levels and Difficulty Progression**
+
+* **Feature:** Game difficulty increases with levels.
+* **How it works:**
+
+  * Level 1 starts with fewer cards (e.g., 6 cards = 3 pairs).
+  * Each level adds more cards (e.g., Level 2 = 12 cards, Level 3 = 18 cards).
+  * Cards are shuffled randomly each level.
+  * Timer is set per level, and decreases as levels get higher.
+  * Player must match all pairs before the timer runs out using mouse clicks to flip cards.
+
+---
+
+## 4. **Timer and Scoreboard**
+
+* **Feature:** Show remaining time, level, and moves made.
+* **How it works:**
+
+  * Use JavaScript’s `setInterval` to count down timer each second.
+  * Update timer display on the screen.
+  * Track player moves (each pair of flips counts as one move).
+  * Display current level, moves, and time left prominently.
+
+---
+
+## 5. **Visual and Audio Feedback**
+
+* **Feature:** Interactive sounds and animations.
+* **How it works:**
+
+  * Play click sound when a card is flipped via mouse click.
+  * Play success sound on matched pair.
+  * Show animation or popup when level is cleared.
+  * Visual hover effects on cards to indicate clickable state (e.g., scale up on hover).
+  * Cards become semi-transparent or visually distinct when matched to indicate success.
+
+---
+
+## 6. **User Interface and Layout**
+
+* **Feature:** Responsive grid layout and controls.
+* **How it works:**
+
+  * Cards arranged in a CSS Grid or Flexbox layout adapting to screen size.
+  * Use Bootstrap 5 components for buttons (Start, Restart, Pause).
+  * Show level progression and badges on the UI.
+  * Mouse hover changes card cursor to pointer to indicate clickable area.
+
+---
+
+## 7. **Rewards and Progress Saving**
+
+* **Feature:** Unlock badges and save progress.
+* **How it works:**
+
+  * After completing each level, award badge or title (e.g., “Khmer Memory Master”).
+  * Use `localStorage` to save highest level reached and best scores.
+  * On reload, load saved progress to continue from last level.
+
+---
+
+## 8. **Game Flow**
+
+* **Feature:** Clear stages from start to finish.
+* **How it works:**
+
+  * Start screen with instructions and Play button.
+  * On Play, shuffle cards and set timer.
+  * Player uses mouse clicks to flip cards and find pairs.
+  * If all pairs matched before timer ends, show level-up popup.
+  * Player can proceed to next level or restart.
+  * If timer runs out, show Game Over screen with retry option.
+
+---
+
+## 9. **Accessibility & Controls**
+
+* **Feature:** Mouse-focused gameplay.
+* **How it works:**
+
+  * Cards are clickable only by mouse clicks.
+  * Prevent accidental double clicks by disabling clicks during animations.
+  * Hover effects show clearly which cards can be clicked.
+
+---
+
+# Summary Table
+
+| Feature                 | How It Works Summary                              |
+| ----------------------- | ------------------------------------------------- |
+| Mouse Card Flip         | Click card → flip animation → reveal front image  |
+| Match Checking          | Compare flipped cards → keep or flip back         |
+| Increasing Levels       | More cards + less time per level                  |
+| Timer & Moves Display   | Show countdown timer + moves count                |
+| Audio & Visual Feedback | Sounds on flip/match + animations                 |
+| Responsive UI Layout    | CSS Grid + Bootstrap for buttons + hover pointer  |
+| Rewards & Progress Save | Badges unlocked + progress stored in localStorage |
+| Game Flow               | Start → Play → Flip cards → Level Up or Game Over |
+| Mouse Control           | Click only; disable clicks during animations      |
+
+---
+
+Would you like me to prepare a **sample code outline** to start coding this game?
