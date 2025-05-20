@@ -88,7 +88,15 @@ Feel free to:
 
 ## 📝 License
 
-This project is open source and available under the MIT License.
+This project is free and open source, released under the MIT License. This means you are free to:
+
+- ✅ Use the code for commercial purposes
+- ✅ Modify the code
+- ✅ Distribute the code
+- ✅ Use the code privately
+- ✅ Sublicense the code
+
+The only requirement is that you include the original MIT License and copyright notice. See the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
