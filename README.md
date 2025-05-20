@@ -51,7 +51,7 @@ A memory card matching game featuring Khmer alphabet characters. Test your memor
 
 1. Clone the repository:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/Lyher99/Khmer-Card-Match.git
    ```
 
 2. Navigate to the project directory:
